@@ -6,6 +6,7 @@ using GHCP_intro_handson_2505_dotnet_api.Models;
 using GHCP_intro_handson_2505_dotnet_api.Services;
 using GHCP_intro_handson_2505_dotnet_api.Data;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using YourNamespace.Models.Dto;
 
 namespace GHCP_intro_handson_2505_dotnet_api.Services.Tests
@@ -73,8 +74,8 @@ namespace GHCP_intro_handson_2505_dotnet_api.Services.Tests
 
             // Assert
             Assert.IsNotNull(result);
-            Assert.AreEqual("Alice", result.Name);
-            Assert.AreEqual("alice@example.com", result.Email);
+            Assert.AreEqual("Alice", result.Customer.Name);
+            Assert.AreEqual("alice@example.com", result.Customer.Email);
         }
 
         [TestMethod]
